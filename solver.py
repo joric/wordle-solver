@@ -26,8 +26,8 @@ def getAvailableWordsByMask(testword,mask,wordlist):
     return validsecrets
 
 def solve(*args):
-    newwordlist = open('ru.txt', encoding='utf-8').read().splitlines()
-    newwordlist.extend(open('en.txt', encoding='utf-8').read().splitlines())
+    newwordlist = open('ru.txt').read().splitlines()
+    newwordlist.extend(open('en.txt').read().splitlines())
 
     p = re.compile(r'\w|\[\w\]|\(\w\)')
     for a in args:
