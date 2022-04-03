@@ -11,7 +11,7 @@ def echo(update, context):
     update.effective_message.reply_text(update.effective_message.text)
 
 def solve(update, context):
-    result = ' '.join(solver.solve2(*context.args))
+    result = ' '.join(solver.solve(*context.args))
     msg = update.message or update.edited_message
     msg.reply_text(f'args: {context.args} result: {result}')
 
