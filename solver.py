@@ -26,7 +26,9 @@ def getAvailableWordsByMask(testword,mask,wordlist):
     return validsecrets
 
 def solve(*args):
-    newwordlist = open('words.txt', encoding='utf-8').read().splitlines()
+    newwordlist = open('ru.txt', encoding='utf-8').read().splitlines()
+    newwordlist.extend(open('en.txt', encoding='utf-8').read().splitlines())
+
     p = re.compile(r'\w|\[\w\]|\(\w\)')
     for a in args:
         m = p.findall(a)
@@ -37,8 +39,11 @@ def solve(*args):
     return newwordlist[:50]
 
 if __name__ == "__main__":
-    test = lambda x: print(solve(*x.split()))
+    test = lambda x: print(x, solve(*x.split()))
     test('н(о)рк[а] гли(с)(т) музей') # стопа
     test('но(р)ка г[л]ист муз[е]й') # плеер
     test('нор[к][а] гли(с)т фа(с)[к][а]') # сушка
     test('но(р)ка глист муз(е)й [д]ожд[ь]') # дверь
+    test('(a)dieu [s](w)eet [s]p[a][w]s [s][h][a][w]n') # shawm shaws
+
+
