@@ -29,3 +29,7 @@ You need to add administrator rights or bot won't be able to reply.
 * https://github.com/Kylmakalle/heroku-telegram-bot (bad tutorial but has env examples)
 * https://towardsdatascience.com/how-to-deploy-a-telegram-bot-using-heroku-for-free-9436f89575d2
 * https://github.com/potassium-chloride/WordleSolver
+* https://habr.com/ru/post/647783/
+* https://torrua.github.io/wordle-cracker
+* https://wordle.belousov.one
+* https://marinintim.com/slovl
