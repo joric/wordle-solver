@@ -5,10 +5,11 @@ from uuid import uuid4
 import solver
 
 def start(update, context):
-    update.effective_message.reply_text("""Hi! I solve wordle. Examples:
+    update.effective_message.reply_text("""Hi! I solve wordle.
+Examples:
 /solve (a)bout f(l)[a](s)(h) [s][h][a]l[l]
 /solve -about f-l=a-s-h =s=h=al=l
-Dictionaries are from:
+Dictionaries:
 • https://www.nytimes.com/games/wordle
 • https://wordle.belousov.one"""
     )
