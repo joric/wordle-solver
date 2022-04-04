@@ -6,12 +6,12 @@ import solver
 
 def start(update, context):
     update.effective_message.reply_text("""Hi! I solve wordle.
+• https://www.nytimes.com/games/wordle
+• https://wordle.belousov.one
 Examples:
 /solve (a)bout f(l)[a](s)(h) [s][h][a]l[l]
 /solve -about f-l=a-s-h =s=h=al=l
-Dictionaries:
-• https://www.nytimes.com/games/wordle
-• https://wordle.belousov.one"""
+"""
     )
 
 def echo(update, context):
