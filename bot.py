@@ -6,8 +6,8 @@ import solver
 
 def start(update, context):
     update.effective_message.reply_text("""Hi! I solve wordle. Examples:
-/solve н(о)рк[а] гли(с)(т) музей
-/solve н-орк=а гли-с-т музей
+/solve (a)bout f(l)[a](s)(h) [s][h][a]l[l]
+/solve -about f-l=a-s-h =s=h=al=l
 Dictionaries are from:
 • https://www.nytimes.com/games/wordle
 • https://marinintim.com/slovl"""
