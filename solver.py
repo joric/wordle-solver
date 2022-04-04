@@ -33,7 +33,7 @@ def solve(*args):
     for a in args:
         m = p1.findall(a) if '[' in a or '(' in a else p2.findall(a)
         testword = [c.strip('-=()[]') for c in m]
-        mask = ['G' if ('[' in c or '=' in c) else 'Y' if ('(' in c or '-' in c) else 'N' for c in m]
+        mask = ['G' if '[' in c or '=' in c else 'Y' if '(' in c or '-' in c else 'N' for c in m]
         newwordlist = getAvailableWordsByMask(testword, mask, newwordlist)
         #print(testword, mask, newwordlist)
     return newwordlist[:50]
