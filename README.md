@@ -31,3 +31,4 @@ Go to a Settings page, click Reveal Config Vars and then add your vars:
 * https://torrua.github.io/wordle-cracker
 * https://wordle.belousov.one
 * https://marinintim.com/slovl
+* https://anch.info/rus/memories/2335
