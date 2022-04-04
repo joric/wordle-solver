@@ -10,7 +10,7 @@ def start(update, context):
 /solve -about f-l=a-s-h =s=h=al=l
 Dictionaries are from:
 • https://www.nytimes.com/games/wordle
-• https://marinintim.com/slovl"""
+• https://wordle.belousov.one"""
     )
 
 def echo(update, context):
