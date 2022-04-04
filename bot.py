@@ -13,7 +13,7 @@ def echo(update, context):
 def solve(update, context):
     result = ' '.join(solver.solve(*context.args))
     msg = update.message or update.edited_message
-    msg.reply_text(result or `¯\_(ツ)_/¯`)
+    msg.reply_text(result or "¯\_(ツ)_/¯")
 
 if __name__ == "__main__":
     TOKEN = os.environ.get('TELEGRAM_TOKEN','12345:abcde')
