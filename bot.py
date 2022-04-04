@@ -5,7 +5,7 @@ from uuid import uuid4
 import solver
 
 def start(update, context):
-    update.effective_message.reply_text('Hi! I solve wordle. Example /solve но(р)ка г[л]ист муз[е]й')
+    update.effective_message.reply_text('Hi! I solve wordle. Examples:\n/solve н(о)рк[а] гли(с)(т) музей\n/solve н-орк=а гли-с-т музей')
 
 def echo(update, context):
     update.effective_message.reply_text(update.effective_message.text)

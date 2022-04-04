@@ -28,12 +28,12 @@ def getAvailableWordsByMask(testword,mask,wordlist):
 def solve(*args):
     newwordlist = open('ru.txt', encoding='utf-8').read().splitlines()
     newwordlist.extend(open('en.txt').read().splitlines())
-
-    p = re.compile(r'\w|\[\w\]|\(\w\)')
+    p1 = re.compile(r'\w|\[\w\]|\(\w\)')
+    p2 = re.compile(r'\w|\-\w|\=\w')
     for a in args:
-        m = p.findall(a)
-        testword = [c.strip('[]()') for c in m]
-        mask = ['G' if '[' in c else 'Y' if '(' in c else 'N' for c in m]
+        m = p1.findall(a) if '[' in a or '(' in a else p2.findall(a)
+        testword = [c.strip('-=()[]') for c in m]
+        mask = ['G' if ('[' in c or '=' in c) else 'Y' if ('(' in c or '-' in c) else 'N' for c in m]
         newwordlist = getAvailableWordsByMask(testword, mask, newwordlist)
         #print(testword, mask, newwordlist)
     return newwordlist[:50]
@@ -45,5 +45,6 @@ if __name__ == "__main__":
     test('нор[к][а] гли(с)т фа(с)[к][а]') # сушка
     test('но(р)ка глист муз(е)й [д]ожд[ь]') # дверь
     test('(a)dieu [s](w)eet [s]p[a][w]s [s][h][a][w]n') # shawm shaws
+    test('н-орк=а гли-с-т музей') # стопа (prefix form)
 
 
