@@ -5,7 +5,16 @@ from uuid import uuid4
 import solver
 
 def start(update, context):
-    update.effective_message.reply_text('Hi! I solve wordle. Examples:\n/solve н(о)рк[а] гли(с)(т) музей\n/solve н-орк=а гли-с-т музей\nDictionaries are from NYT and https://marinintim.com/slovl')
+    update.effective_message.reply_text(
+'''
+Hi! I solve wordle. Examples:
+/solve н(о)рк[а] гли(с)(т) музей
+/solve н-орк=а гли-с-т музей
+Dictionaries are from:
+* https://www.nytimes.com/games/wordle
+* https://marinintim.com/slovl
+'''
+    )
 
 def echo(update, context):
     update.effective_message.reply_text(update.effective_message.text)
