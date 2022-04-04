@@ -9,7 +9,7 @@ def isThisSecretAvailable(testword,mask,secret):
         return False
     dup = set(testword[i] for i in range(len(mask)) if mask[i]=='G' or mask[i]=='Y')
     for i in range(len(mask)):
-        if mask[i]=='N' and (testword[i] not in secret or testword[i] in dup):
+        if mask[i]=='N' and testword[i]!=secret[i] and (testword[i] not in secret or testword[i] in dup):
             continue
         if mask[i]=='G' and testword[i]==secret[i]:
             continue
@@ -41,10 +41,9 @@ def solve(*args):
 if __name__ == "__main__":
     test = lambda x: print(x, solve(*x.split()))
     test('н(о)рк[а] гли(с)(т) музей') # стопа
-    test('но(р)ка г[л]ист муз[е]й') # плеер
     test('нор[к][а] гли(с)т фа(с)[к][а]') # сушка
     test('но(р)ка глист муз(е)й [д]ожд[ь]') # дверь
     test('(a)dieu [s](w)eet [s]p[a][w]s [s][h][a][w]n') # shawm shaws
     test('н-орк=а гли-с-т музей') # стопа (prefix form)
-
+    test('но-р=к=а глист д-ра=к=а =рыб=к=а =ра=м=к=а') # рюмка only
 
