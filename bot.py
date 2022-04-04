@@ -9,8 +9,8 @@ def start(update, context):
 /solve н(о)рк[а] гли(с)(т) музей
 /solve н-орк=а гли-с-т музей
 Dictionaries are from:
-* https://www.nytimes.com/games/wordle
-* https://marinintim.com/slovl"""
+• https://www.nytimes.com/games/wordle
+• https://marinintim.com/slovl"""
     )
 
 def echo(update, context):
