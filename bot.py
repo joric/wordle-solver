@@ -17,9 +17,7 @@ def echo(update, context):
     update.effective_message.reply_text(update.effective_message.text)
 
 def solve(update, context):
-    result = ' '.join(solver.solve(*context.args))
-    msg = update.message or update.edited_message
-    msg.reply_text(result or "¯\_(ツ)_/¯")
+    update.effective_message.reply_text(' '.join(solver.solve(*context.args)) or "¯\_(ツ)_/¯")
 
 if __name__ == "__main__":
     TOKEN = os.environ.get('TELEGRAM_TOKEN','12345:abcde')
