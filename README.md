@@ -9,16 +9,12 @@ https://t.me/joricswordlesolverbot
 Use @Botfather at Telegram to get telegram token and set up the bot.
 
 * "Sorry, this username is already taken. Please try something different."
-	* Start again from the bot name but (e.g. add a number)
+	* Start from the beginning, use different display name (e.g. add a number)
 
-If you add bot to channel it needs administrator rights to be able to reply.
+Go to a Heroku Settings page, click Reveal Config Vars and then add your vars:
 
-## Heroku setup
-
-Go to a Settings page, click Reveal Config Vars and then add your vars:
-
-* TELEGRAM_TOKEN: '12345:abcde'
-* HEROKU_URL: https://appname.herokuapp.com
+* TELEGRAM_TOKEN: '12345:abcde' (@Botfather gives you a token)
+* HEROKU_URL: https://appname.herokuapp.com (appname is your heroku app)
 
 ## References
 
