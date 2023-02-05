@@ -1,6 +1,6 @@
 # Wordle Solver
 
-Example telegram bot (hosted on heroku):
+Example telegram bot:
 
 https://t.me/joricswordlesolverbot
 
@@ -11,10 +11,29 @@ Use @Botfather at Telegram to get telegram token and set up the bot.
 * "Sorry, this username is already taken. Please try something different."
 	* Start from the beginning, use different display name (e.g. add a number)
 
+### Heroku
+
 Go to a Heroku Settings page, click Reveal Config Vars and then add your vars:
 
-* TELEGRAM_TOKEN: '12345:abcde' (@Botfather gives you a token)
-* HEROKU_URL: https://appname.herokuapp.com (appname is your heroku app)
+* BOT_TOKEN: '12345:abcde' (@Botfather gives you a token)
+* URL: https://appname.domain.com (url of your app)
+
+Since November 28, 2022 free dynos are replaced with eco dynos scaled down to 0,
+so Heroku is no longer an option:
+
+* https://help.heroku.com/RSBRUH58/removal-of-heroku-free-product-plans-faq
+
+### Vercel
+
+#### Add env variable to vercel.com
+
+Add your telegram bot token as `BOT_TOKEN` variable
+
+#### Register webhook
+
+``` bash
+curl "https://api.telegram.org/bot<BOT_TOKEN>/setWebhook?url=https://your-project-name.vercel.app/api/webhook/"
+```
 
 ## References
 
