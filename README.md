@@ -32,7 +32,7 @@ Add your telegram bot token as `BOT_TOKEN` variable
 #### Register webhook
 
 ``` bash
-curl "https://api.telegram.org/bot<BOT_TOKEN>/setWebhook?url=https://xxx.vercel.app/api/webhook/"
+curl "https://api.telegram.org/bot<BOT_TOKEN>/setWebhook?url=https://yourapp.vercel.app/api/webhook/"
 ```
 
 ## References
