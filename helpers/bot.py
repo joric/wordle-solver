@@ -29,5 +29,5 @@ def get_dispatcher(bot):
 
     dispatcher.add_handler(CommandHandler("start", start))
     dispatcher.add_handler(CommandHandler("solve", solve))
-    dispatcher.add_handler(MessageHandler((Filters.text | Filters.update) & ~Filters.command, echo))
+    dispatcher.add_handler(MessageHandler((Filters.text | Filters.update) & ~Filters.command, solve))
     return dispatcher
