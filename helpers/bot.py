@@ -18,7 +18,8 @@ Examples:
     )
 
 def echo(update, context):
-    update.effective_message.reply_text(update.effective_message.text)
+    #update.effective_message.reply_text(update.effective_message.text)
+    solve(update, context)
 
 def solve(update, context):
     update.effective_message.reply_text(' '.join(solver.solve(*context.args)) or "¯\_(ツ)_/¯")
@@ -29,5 +30,5 @@ def get_dispatcher(bot):
 
     dispatcher.add_handler(CommandHandler("start", start))
     dispatcher.add_handler(CommandHandler("solve", solve))
-    dispatcher.add_handler(MessageHandler((Filters.text | Filters.update) & ~Filters.command, solve))
+    dispatcher.add_handler(MessageHandler((Filters.text | Filters.update) & ~Filters.command, echo))
     return dispatcher
