@@ -19,7 +19,7 @@ Examples:
 
 def echo(update, context):
     #update.effective_message.reply_text(update.effective_message.text)
-    solve(update, context)
+    update.effective_message.reply_text(' '.join(solver.solve(*update.effective_message.text.split())) or "¯\_(ツ)_/¯")
 
 def solve(update, context):
     update.effective_message.reply_text(' '.join(solver.solve(*context.args)) or "¯\_(ツ)_/¯")
