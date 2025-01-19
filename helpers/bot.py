@@ -14,6 +14,7 @@ def start(update, context):
 Examples:
 /solve (a)bout f(l)[a](s)(h) [s][h][a]l[l]
 /solve -about f-l=a-s-h =s=h=al=l
+The best starting word is either "crane" or "slate".
 """
     )
 
