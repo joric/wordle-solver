@@ -11,7 +11,7 @@ def start(update, context):
     update.effective_message.reply_text("""Hi! I solve wordle.
 • https://www.nytimes.com/games/wordle
 • https://wordle.belousov.one
-Examples:
+Each input string should countain all tries. Examples:
 /solve (a)bout f(l)[a](s)(h) [s][h][a]l[l]
 /solve -about f-l=a-s-h =s=h=al=l
 The best starting word is either "crane" or "slate".
