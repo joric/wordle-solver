@@ -12,8 +12,9 @@ def start(update, context):
 • https://www.nytimes.com/games/wordle
 • https://wordle.belousov.one
 Each input string should countain all tries. Examples:
-/solve (a)bout f(l)[a](s)(h) [s][h][a]l[l]
-/solve -about f-l=a-s-h =s=h=al=l
+(a)bout f(l)[a](s)(h) [s][h][a]l[l]
+-about f-l=a-s-h =s=h=al=l
+Where [] or = means exact match, () or - means partial match.
 The best starting word is either "crane" or "slate".
 """
     )
@@ -30,6 +31,6 @@ def get_dispatcher(bot):
     dispatcher = Dispatcher(bot, None, workers=0)
 
     dispatcher.add_handler(CommandHandler("start", start))
-    dispatcher.add_handler(CommandHandler("solve", solve))
+    #dispatcher.add_handler(CommandHandler("solve", solve))
     dispatcher.add_handler(MessageHandler((Filters.text | Filters.update) & ~Filters.command, echo))
     return dispatcher
