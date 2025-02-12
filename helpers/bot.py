@@ -11,11 +11,10 @@ def start(update, context):
     update.effective_message.reply_text("""Hi! I solve wordle.
 • https://www.nytimes.com/games/wordle
 • https://wordle.belousov.one
-[] means exact match, () means partial match, or use "=" and "-":
-(a)bout f(l)[a](s)(h) [s][h][a]l[l]
--about f-l=a-s-h =s=h=al=l
 The best starting words are "salet", "reast", or "crate".
 The solver is stateless, each input string should countain all tries.
+Use "=" and "-" prefixes for exact (green) and partial (yellow) match,
+E.g. "-about f-l=a-s-h =s=h=al=l" outputs "shawl".
 """
     )
 
