@@ -11,7 +11,7 @@ def start(update, context):
     update.effective_message.reply_text("""Hi! I solve wordle.
 • https://www.nytimes.com/games/wordle
 • https://wordle.belousov.one
-[] means exact match, () means partial match (or use = and - prefixes):
+[] means exact match, () means partial match (or use = and -):
 (a)bout f(l)[a](s)(h) [s][h][a]l[l]
 -about f-l=a-s-h =s=h=al=l
 The best starting words are "salet", "trace", and "crate".
