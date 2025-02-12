@@ -14,8 +14,8 @@ def start(update, context):
 [] means exact match, () means partial match, or use "=" and "-":
 (a)bout f(l)[a](s)(h) [s][h][a]l[l]
 -about f-l=a-s-h =s=h=al=l
-The solver is stateless, each input string should countain all tries.
 The best starting words are "salet", "trace", and "crate".
+The solver is stateless, each input string should countain all tries.
 """
     )
 
