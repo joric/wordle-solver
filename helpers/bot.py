@@ -14,7 +14,7 @@ def start(update, context):
 The best starting words are "salet", "reast", or "crate".
 The solver is stateless, each input string should countain all tries.
 Use "=" and "-" prefixes for exact (green) and partial (yellow) match.
-E.g. "-about f-l=a-s-h =s=h=al=l" outputs "shawl".
+For example, "-about f-l=a-s-h =s=h=al=l" outputs "shawl".
 """
     )
 
