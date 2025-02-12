@@ -15,7 +15,7 @@ def start(update, context):
 Each input string should countain all tries. Examples:
 (a)bout f(l)[a](s)(h) [s][h][a]l[l]
 -about f-l=a-s-h =s=h=al=l
-The best starting word is either "later" or "аниме".
+The best starting word is either "crane" or "later".
 """
     )
 
