@@ -13,7 +13,7 @@ def start(update, context):
 • https://wordle.belousov.one
 The best starting words are "salet", "reast", or "crate".
 The solver is stateless, each input string should countain all tries.
-Use "=" and "-" prefixes for exact (green) and partial (yellow) match.
+Use "=" and "-" prefixes for exact (green) and partial (yellow) matches.
 For example, "-about f-l=a-s-h =s=h=al=l" outputs "shawl".
 """
     )
