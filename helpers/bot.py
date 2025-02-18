@@ -11,7 +11,7 @@ def start(update, context):
     update.effective_message.reply_text("""Hi! I solve wordle.
 • https://www.nytimes.com/games/wordle
 • https://wordle.belousov.one
-The best starting words are "salet", "reast", or "crate".
+The best starting words are "salet", "reast", "crate", or "аниме".
 The solver is stateless, each input string should countain all tries.
 Use "=" and "-" prefixes for exact (green) and partial (yellow) matches.
 For example, "-about f-l=a-s-h =s=h=al=l" outputs "shawl".
